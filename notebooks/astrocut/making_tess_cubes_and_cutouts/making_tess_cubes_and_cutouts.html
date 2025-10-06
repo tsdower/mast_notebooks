@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Generating Cubes and Cutouts from TESS FFIs &#8212; MAST Notebook Repository</title>
   
@@ -15,49 +14,47 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/table.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/table.css?v=cd6c26fb" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=32d70693" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-SK672ZMP7G"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -65,17 +62,19 @@
                 gtag('js', new Date());
                 gtag('config', 'G-SK672ZMP7G');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-SK672ZMP7G');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/astrocut/making_tess_cubes_and_cutouts/making_tess_cubes_and_cutouts';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Intro" href="../../astroquery/intro.html" />
-    <link rel="prev" title="Welcome to the MAST Notebook Repository!" href="../../../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -85,27 +84,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -127,8 +122,13 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -136,6 +136,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -151,6 +153,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../../intro.html">
@@ -169,7 +173,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -179,82 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Astrocut</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Generating Cubes and Cutouts from TESS FFIs</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Astroquery</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../astroquery/intro.html">Intro</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../astroquery/nb.html">Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../astroquery/beginner_search/beginner_search.html">Beginner: Searching MAST using astroquery.mast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../astroquery/beginner_zcut/beginner_zcut.html">Beginner: Zcut and Astroquery Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../astroquery/large_downloads/large_downloads.html">Large Downloads in <code class="docutils literal notranslate"><span class="pre">astroquery.mast</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../astroquery/historic_quasar_observations/historic_quasar_observations.html">Historical Quasar Observations</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../astroquery/wildcard_searches/wildcard_searches.html">Wildcard Handling with Astroquery.mast</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">HSC</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/HCV_API/HCV_API_demo.html">Hubble Catalog of Variables Notebook (API version)</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/HCV_CASJOBS/HCV_casjobs_demo.html">Hubble Catalog of Variables Notebook (CasJobs version)</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/HSCV3_API/hscv3_api.html">Hubble Source Catalog API Notebook</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/HSCV3_SMC_API/hscv3_smc_api.html">Hubble Source Catalog API Notebook: SMC Color-Magnitude Diagram</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/HSC_TAP/HSC_TAP.html">MAST Table Access Protocol Hubble Source Catalog Demo</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/SWEEPS_HSCV3P1/sweeps_hscv3p1.html">Hubble Source Catalog SWEEPS Proper Motion Notebook</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/SWEEPS_HSCV3P1_API/sweeps_hscv3p1_api.html">Hubble Source Catalog SWEEPS Proper Motion Notebook</a></li>
-
-
-
-
-
-
-
-
-
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">IUE</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">IUE</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../IUE/exploring_UV_extinction_curves/exploring_UV_extinction_curves.html">Exploring UV Extinction Curves</a></li>
 </ul>
@@ -275,14 +215,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Kepler</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/beginner.html">Beginner Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/beginner.html">Beginner Notebooks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/plotting_lightcurves/plotting_lightcurves.html">Using Kepler Data to Plot a Light Curve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/plotting_images_from_tpf/plotting_images_from_tpf.html">Plotting Images from Kepler Target Pixel Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/plotting_dvts/plotting_dvts.html">Read and Plot A Kepler Data Validation Timeseries File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/plotting_catalog_over_FFI/plotting_catalog_over_FFI.html">Plotting a Catalog over a Kepler Full Frame Image File</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/lightkurve.html">Lightkurve</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/lightkurve.html">Lightkurve</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/lightkurve_analyzing_lc_products/lightkurve_analyzing_lc_products.html">Using <em>Kepler</em> Light Curve Products with Lightkurve</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/lightkurve_analyzing_tpf_products/lightkurve_analyzing_tpf_products.html">Using <em>Kepler</em> Target Pixel File Products with Lightkurve</a></li>
@@ -295,8 +235,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/lightkurve_interactively_inspecting_TPFs_and_LCs/lightkurve_interactively_inspecting_TPFs_and_LCs.html">Interactively Inspecting Target Pixel Files and Light Curves</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/inst_noise.html">Instrumental Noise</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/inst_noise.html">Instrumental Noise</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/instrumental_noise_1_data_gaps_and_quality_flags/instrumental_noise_1_data_gaps_and_quality_flags.html">Data Gaps and Quality Flags</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/instrumental_noise_2_spurious_signals_and_time_sampling_effects/instrumental_noise_2_spurious_signals_and_time_sampling_effects.html">Spurious Signals and Time Sampling Effects</a></li>
@@ -306,8 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/instrumental_noise_4_electronic_noise/instrumental_noise_4_electronic_noise.html">Electronic Noise</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/signals.html">Identifying Periodic Signals</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/signals.html">Identifying Periodic Signals</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/identifying_transiting_planet_signals/identifying_transiting_planet_signals.html">Identifying Transiting Planet Signals in a <em>Kepler</em> Light Curve</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/measuring_a_rotation_period/measuring_a_rotation_period.html">Measuring and Removing a Rotation Period Signal from a <em>Kepler</em> Light Curve</a></li>
@@ -317,8 +257,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/verifying_the_location_of_a_signal/verifying_the_location_of_a_signal.html">Verifying the Location of a Signal in <em>Kepler</em> Pixel Data</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/periodograms.html">Periodograms &amp; Asteroseismology</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/periodograms.html">Periodograms &amp; Asteroseismology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/creating_periodograms/creating_periodograms.html">Creating Periodograms</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/how_to_understand_and_manipulate_the_periodogram_of_an_oscillating_star/how_to_understand_and_manipulate_the_periodogram_of_an_oscillating_star.html">How to Understand and Manipulate the Periodogram of an Oscillating Star</a></li>
@@ -326,7 +266,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/how_to_estimate_a_stars_mass_and_radius_using_asteroseismology/how_to_estimate_a_stars_mass_and_radius_using_asteroseismology.html">How to Estimate a Star’s Mass and Radius Using Asteroseismology</a></li>
 
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">K2</span></p>
 <ul class="nav bd-sidenav">
@@ -348,7 +288,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TESS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/beginner.html">Beginner Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/beginner.html">Beginner Notebooks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/beginner_astroquery_dv/beginner_astroquery_dv.html">Retrieve TESS Data Validation Products with Astroquery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/beginner_how_to_use_dvt/beginner_how_to_use_dvt.html">Read and Plot A TESS Data Validation Timeseries File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/beginner_how_to_use_ffi/beginner_how_to_use_ffi.html">Read and Display a TESS Full Frame Image</a></li>
@@ -362,24 +302,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/beginner_tour_lc_tp/beginner_tour_lc_tp.html">A Tour of the Contents of the TESS 2-minute Cadence Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/beginner_tesscut_astroquery/beginner_tesscut_astroquery.html">Cutout of the TESS FFIs using Astrocut and Astroquery</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/lc.html">Light Curves</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/lc.html">Light Curves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/interm_gi_query/interm_gi_query.html">Intermediate:  Search and Download GI Program Light Curves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/interm_tasoc_lc/interm_tasoc_lc.html">Intermediate: Finding Flares and Variable Stars in TASOC Light Curves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/asteroid_rotation/asteroid_rotation.html">Finding the Rotation Curve of an Asteroid or Comet with TESScut and Lightkurve</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/FFIs.html">TESS FFIs</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/FFIs.html">TESS FFIs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/interm_tesscut_dss_overlay/interm_tesscut_dss_overlay.html">Intermediate: Overlay a Cutout of the TESS FFIs with DSS imaging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/interm_tesscut_requests/interm_tesscut_requests.html">Intermediate: Create TESS FFI Cutout using Python Requests</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/noise.html">Instrumental Noise</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/noise.html">Instrumental Noise</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/interm_tess_prf_retrieve/interm_tess_prf_retrieve.html">Intermediate: Retrieve TESS Pixel Response Function Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/removing_scattered_light_using_regression/removing_scattered_light_using_regression.html">Removing Scattered Light from <em>TESS</em> Data Using the Lightkurve <code class="docutils literal notranslate"><span class="pre">RegressionCorrector</span></code></a></li>
 
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -395,7 +335,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -404,14 +344,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -434,36 +374,18 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/spacetelescope/mast_notebooks/main?urlpath=tree/notebooks/astrocut/making_tess_cubes_and_cutouts/making_tess_cubes_and_cutouts.ipynb" target="_blank"
+      <li><a href="https://timeseries.science.stsci.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/spacetelescope/mast_notebooks&urlpath=lab/tree/mast_notebooks/notebooks/astrocut/making_tess_cubes_and_cutouts/making_tess_cubes_and_cutouts.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../../../_static/images/logo_binder.svg">
+    <img alt="JupyterHub logo" src="../../../_static/images/logo_jupyterhub.svg">
   </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://colab.research.google.com/github/spacetelescope/mast_notebooks/blob/main/notebooks/astrocut/making_tess_cubes_and_cutouts/making_tess_cubes_and_cutouts.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onColab"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="../../../_static/images/logo_colab.png">
-  </span>
-<span class="btn__text-container">Colab</span>
+<span class="btn__text-container">JupyterHub</span>
 </a>
 </li>
       
@@ -585,10 +507,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -596,14 +518,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -652,10 +574,10 @@ document.write(`
                   
   <p><a id="top"></a></p>
 <section class="tex2jax_ignore mathjax_ignore" id="generating-cubes-and-cutouts-from-tess-ffis">
-<h1>Generating Cubes and Cutouts from TESS FFIs<a class="headerlink" href="#generating-cubes-and-cutouts-from-tess-ffis" title="Permalink to this heading">#</a></h1>
+<h1>Generating Cubes and Cutouts from TESS FFIs<a class="headerlink" href="#generating-cubes-and-cutouts-from-tess-ffis" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <section id="learning-goals">
-<h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Permalink to this heading">#</a></h2>
+<h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Link to this heading">#</a></h2>
 <p>By the end of this tutorial, you will:</p>
 <ul class="simple">
 <li><p>Learn about the two TESS full frame image (FFI) types: SPOC and TICA.</p></li>
@@ -667,28 +589,28 @@ document.write(`
 </ul>
 </section>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>In this tutorial, you will learn the basic functionality of <a class="reference external" href="https://github.com/spacetelescope/astrocut">astrocut</a>’s <code class="docutils literal notranslate"><span class="pre">CubeFactory</span></code>, <code class="docutils literal notranslate"><span class="pre">TicaCubeFactory</span></code>, and <code class="docutils literal notranslate"><span class="pre">CutoutFactory</span></code>. These 3 tools allow users to generate cubes and cutouts of TESS images. TESS image cubes are stacks of TESS full frame images (TESS FFIs) which are formatted to allow users to make cutouts with <code class="docutils literal notranslate"><span class="pre">CutoutFactory</span></code>. These cutouts are sub-images that will only contain your region of interest, to make analysis easier.</p>
 <p>The process of generating cubes, and making cutouts from them, mimicks the web-based <a class="reference external" href="https://mast.stsci.edu/tesscut/">TESSCut</a> service. This tutorial will teach you to make cubes and cutouts that are customized for your specific use-cases, while also giving insight to how TESSCut calls upon astrocut to create cutouts.</p>
 <p>As in the TESSCut service, there are <em>two</em> different TESS FFI product types you can work with in this notebook. These two product types are the TESS mission-provided, <a class="reference external" href="https://archive.stsci.edu/missions-and-data/tess">Science Processing Operations Center (SPOC) FFIs</a>, and the <a class="reference external" href="https://archive.stsci.edu/hlsp/tica">TESS Image CAlibrator (TICA) FFIs</a>. Both are available via <code class="docutils literal notranslate"><span class="pre">astroquery.mast.Observations</span></code>, and both have different use-cases. The TICA products offer the latest sector observations due to their faster delivery cadence, and can be available up to 3 times sooner than their SPOC counterparts. As such, for those who are working with time-sensitive observations, TICA may be the best option for generating your cutouts. Note that the SPOC and TICA products are processed through different pipelines and thus have different pixel values and WCS solutions. Please refer to the <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2016SPIE.9913E..3EJ/abstract">SPOC pipeline paper</a> and the <a class="reference external" href="https://iopscience.iop.org/article/10.3847/2515-5172/abd63a">TICA pipeline paper</a> for more information on the differences and similarities between the SPOC and TICA products.</p>
 <p><img alt="TICA and SPOC ingest" src="../../../_images/tica-spoc-ingest.png" /></p>
 <p>The workflow for this notebook consists of:</p>
 <ul class="simple">
-<li><p><span class="xref myst">Retrieving and Downloading the FFIs</span></p>
+<li><p><a class="reference internal" href="#Retrieving-and-Downloading-the-FFIs"><span class="xref myst">Retrieving and Downloading the FFIs</span></a></p>
 <ul>
-<li><p><span class="xref myst">Retrieving the FFIs</span></p></li>
-<li><p><span class="xref myst">Downloading the FFIs</span></p></li>
-<li><p><span class="xref myst">Inspecting the FFIs</span></p></li>
+<li><p><a class="reference internal" href="#Retrieving-the-FFIs"><span class="xref myst">Retrieving the FFIs</span></a></p></li>
+<li><p><a class="reference internal" href="#Downloading-the-FFIs"><span class="xref myst">Downloading the FFIs</span></a></p></li>
+<li><p><a class="reference internal" href="#Inspecting-the-FFIs"><span class="xref myst">Inspecting the FFIs</span></a></p></li>
 </ul>
 </li>
-<li><p><span class="xref myst">Creating a Cube</span></p></li>
-<li><p><span class="xref myst">Creating the Cutouts</span></p></li>
-<li><p><span class="xref myst">Exercise: Generate Cutouts for TIC 2527981 Sector 27 SPOC Products</span></p></li>
-<li><p><span class="xref myst">Resources</span></p></li>
+<li><p><a class="reference internal" href="#Creating-a-Cube"><span class="xref myst">Creating a Cube</span></a></p></li>
+<li><p><a class="reference internal" href="#Creating-the-Cutouts"><span class="xref myst">Creating the Cutouts</span></a></p></li>
+<li><p><a class="reference internal" href="#Exercise:-Generate-Cutouts-for-TIC-2527981-Sector-27-SPOC-Products"><span class="xref myst">Exercise: Generate Cutouts for TIC 2527981 Sector 27 SPOC Products</span></a></p></li>
+<li><p><a class="reference internal" href="#Resources"><span class="xref myst">Resources</span></a></p></li>
 </ul>
 </section>
 <section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
 <p>Below is a list of the packages used throughout this notebook, and their use-cases. Please ensure you have the recommended version of these packages installed on the environment this notebook has been launched in. See the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file for recommended package versions.</p>
 <ul class="simple">
 <li><p><em>astropy.units</em> for unit conversion</p></li>
@@ -707,16 +629,16 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 
-<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">astropy.units</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">u</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">astrocut</span> <span class="kn">import</span> <span class="n">CubeFactory</span><span class="p">,</span> <span class="n">TicaCubeFactory</span><span class="p">,</span> <span class="n">CutoutFactory</span>
-<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">SkyCoord</span>
-<span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
-<span class="kn">from</span> <span class="nn">astroquery.mast</span> <span class="kn">import</span> <span class="n">Observations</span>
-<span class="kn">from</span> <span class="nn">matplotlib.path</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">PathPatch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astrocut</span><span class="w"> </span><span class="kn">import</span> <span class="n">CubeFactory</span><span class="p">,</span> <span class="n">TicaCubeFactory</span><span class="p">,</span> <span class="n">CutoutFactory</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.coordinates</span><span class="w"> </span><span class="kn">import</span> <span class="n">SkyCoord</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">fits</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astroquery.mast</span><span class="w"> </span><span class="kn">import</span> <span class="n">Observations</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.path</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="kn">import</span> <span class="n">PathPatch</span>
 </pre></div>
 </div>
 </div>
@@ -724,7 +646,7 @@ document.write(`
 <p>Below are the helper functions we will call for plotting purposes later in the notebook.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_coords</span><span class="p">(</span><span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">convert_coords</span><span class="p">(</span><span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Wrap the input coordinates `ra` and `dec` around the upper limit of 180</span>
 <span class="sd">    degrees and convert to radians so that they may be plotted on the Aitoff canvas.</span>
 <span class="sd">    </span>
@@ -756,7 +678,7 @@ document.write(`
 
     <span class="k">return</span> <span class="n">ra_rad</span><span class="p">,</span> <span class="n">dec_rad</span>
 
-<span class="k">def</span> <span class="nf">plot_footprint</span><span class="p">(</span><span class="n">coords</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_footprint</span><span class="p">(</span><span class="n">coords</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Plots a polygon of 4 vertices onto an aitoff projection on a matplotlib canvas.</span>
 <span class="sd">    </span>
 <span class="sd">    Parameter(s)</span>
@@ -802,10 +724,10 @@ document.write(`
 </section>
 <hr class="docutils" />
 <section id="retrieving-and-downloading-the-ffis">
-<h2>Retrieving and Downloading the FFIs<a class="headerlink" href="#retrieving-and-downloading-the-ffis" title="Permalink to this heading">#</a></h2>
+<h2>Retrieving and Downloading the FFIs<a class="headerlink" href="#retrieving-and-downloading-the-ffis" title="Link to this heading">#</a></h2>
 <p>Before we begin generating cubes and cutouts from TESS FFIs, we must first acquire these FFIs. To do this, we will request and download the FFIs locally using <a class="reference external" href="https://astroquery.readthedocs.io/en/latest/mast/mast.html">astroquery.mast</a>, or more specifically, the <code class="docutils literal notranslate"><span class="pre">astroquery.mast.Observations</span></code> tool, which will grant us access to the database that houses the TESS products. This is also how the TESSCut API generates its cutouts.</p>
 <section id="retrieving-the-ffis">
-<h3>Retrieving the FFIs<a class="headerlink" href="#retrieving-the-ffis" title="Permalink to this heading">#</a></h3>
+<h3>Retrieving the FFIs<a class="headerlink" href="#retrieving-the-ffis" title="Link to this heading">#</a></h3>
 <p>You can download FFIs for any sector, camera, and CCD type. This notebook will generate cutouts for target TIC 2527981 using TICA FFIs in sector 27, but feel free to substitute a favorite target of your own. To find our target, we will filter with the database criteria: <code class="docutils literal notranslate"><span class="pre">coordinates</span></code>, <code class="docutils literal notranslate"><span class="pre">target_name</span></code>, <code class="docutils literal notranslate"><span class="pre">dataproduct_type</span></code>, and <code class="docutils literal notranslate"><span class="pre">sequence_number</span></code>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">coordinates</span></code> criteria will filter for the coordinates of our target, while the <code class="docutils literal notranslate"><span class="pre">target_name</span></code> will filter for TICA FFIs and exclude all SPOC FFIs. <code class="docutils literal notranslate"><span class="pre">dataproduct_type</span></code> ensures we get image observations, and the <code class="docutils literal notranslate"><span class="pre">sequence_number</span></code> will be used to filter for only sector 27 observations. With this information, let’s compile our query…</p>
 <div class="cell docutils container">
@@ -909,7 +831,7 @@ document.write(`
 </div>
 </section>
 <section id="downloading-the-ffis">
-<h3>Downloading the FFIs<a class="headerlink" href="#downloading-the-ffis" title="Permalink to this heading">#</a></h3>
+<h3>Downloading the FFIs<a class="headerlink" href="#downloading-the-ffis" title="Link to this heading">#</a></h3>
 <p>Now we are ready to download the products. Use the <code class="docutils literal notranslate"><span class="pre">download_products</span></code> call to download these locally to your machine.</p>
 <div class="alert alert-block alert-info"><b>Note:</b> If you have many files, or a large download size, you should set the `curl_flag` option to `True`. This will generate a bash script that will download the products (via cURL) when executed. </div>
 <p>To save space in this example, we will only download the first 5 TICA FFIs.</p>
@@ -964,7 +886,7 @@ document.write(`
 </div>
 </section>
 <section id="inspecting-the-ffis">
-<h3>Inspecting the FFIs<a class="headerlink" href="#inspecting-the-ffis" title="Permalink to this heading">#</a></h3>
+<h3>Inspecting the FFIs<a class="headerlink" href="#inspecting-the-ffis" title="Link to this heading">#</a></h3>
 <p>Now that we have the TICA FFIs stored locally, let’s do some quick plotting and inspection. We can use the <code class="docutils literal notranslate"><span class="pre">manifest</span></code> output from our download call above to get the list of our downloaded FFIs in their respective locations. Let’s open up one of them and do some plotting and header inspection.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1214,7 +1136,7 @@ COMMENT calibration applied at 2020-12-30T19:21:59.245436
 </section>
 </section>
 <section id="creating-a-cube">
-<h2>Creating a Cube<a class="headerlink" href="#creating-a-cube" title="Permalink to this heading">#</a></h2>
+<h2>Creating a Cube<a class="headerlink" href="#creating-a-cube" title="Link to this heading">#</a></h2>
 <p>Now that we have retrieved, downloaded, and inspected our TICA FFIs, it’s time to make a cube out of them. To do this, we will call on astrocut’s <code class="docutils literal notranslate"><span class="pre">TicaCubeFactory</span></code> class which contains all the functionality to stack the TICA FFIs into a cube as efficiently as possible and store all the FFIs’ metadata in a binary table.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1290,7 +1212,7 @@ No.    Name      Ver    Type      Cards   Dimensions   Format
 </div>
 </section>
 <section id="creating-the-cutouts">
-<h2>Creating the Cutouts<a class="headerlink" href="#creating-the-cutouts" title="Permalink to this heading">#</a></h2>
+<h2>Creating the Cutouts<a class="headerlink" href="#creating-the-cutouts" title="Link to this heading">#</a></h2>
 <p>Now that we have our cube we are able to generate cutouts of our region of interest. Unlike in the cube-making process, we have a single class for generating the cutouts from both SPOC or TICA cubes, <code class="docutils literal notranslate"><span class="pre">CutoutFactory</span></code>. To make the cutouts, we will call upon <code class="docutils literal notranslate"><span class="pre">CutoutFactory</span></code>’s  <code class="docutils literal notranslate"><span class="pre">cube_cut</span></code> and feed it the cube we just made, the coordinates for the center of our region of interest, which in this case is our object TIC 2527981, the cutout size for our region (in pixels), and lastly, the product type that was used for making our cube.</p>
 <div class="alert alert-block alert-info"><b>Note:</b> The call below may generate a "VerifyWarning: Card is too long, comment will be truncated." warning message, which can safely be ignored. </div><div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1444,7 +1366,7 @@ PROCVER = &#39;0.10.1.dev32+g5d0d3e0&#39; / software version
 </div>
 </section>
 <section id="exercise-generate-cutouts-for-tic-2527981-sector-27-spoc-products">
-<h2>Exercise: Generate Cutouts for TIC 2527981 Sector 27 SPOC Products<a class="headerlink" href="#exercise-generate-cutouts-for-tic-2527981-sector-27-spoc-products" title="Permalink to this heading">#</a></h2>
+<h2>Exercise: Generate Cutouts for TIC 2527981 Sector 27 SPOC Products<a class="headerlink" href="#exercise-generate-cutouts-for-tic-2527981-sector-27-spoc-products" title="Link to this heading">#</a></h2>
 <p>Let’s now generate cutouts of our target from the SPOC products of the same observation, and use this as an opportunity to compare the FFI file structure differences between SPOC and TICA.</p>
 <p>Perform the same <code class="docutils literal notranslate"><span class="pre">astroquery.mast.Observations</span></code> query, inspect the FFIs, generate the cube (remember that there are two cube-generating classes, <code class="docutils literal notranslate"><span class="pre">CubeFactory</span></code> and <code class="docutils literal notranslate"><span class="pre">TicaCubeFactory</span></code>), and generate the cutouts from the cube, in the cells below.</p>
 <div class="cell docutils container">
@@ -1491,7 +1413,7 @@ PROCVER = &#39;0.10.1.dev32+g5d0d3e0&#39; / software version
 </div>
 </section>
 <section id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h2>
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <p>The following is a list of resources that were referenced throughout the tutorial, as well as some additional references that you may find useful:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://astrocut.readthedocs.io/en/latest/astrocut/index.html">astrocut</a> Documentation</p></li>
@@ -1506,7 +1428,7 @@ PROCVER = &#39;0.10.1.dev32+g5d0d3e0&#39; / software version
 </ul>
 </section>
 <section id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this heading">#</a></h2>
+<h2>Citations<a class="headerlink" href="#citations" title="Link to this heading">#</a></h2>
 <p>If you use any of astroquery’s tools or astrocut for published research, please cite the
 authors. Follow these links for more information about citing astroquery and astrocut:</p>
 <ul class="simple">
@@ -1515,13 +1437,13 @@ authors. Follow these links for more information about citing astroquery and ast
 </ul>
 </section>
 <section id="about-this-notebook">
-<h2>About this Notebook<a class="headerlink" href="#about-this-notebook" title="Permalink to this heading">#</a></h2>
+<h2>About this Notebook<a class="headerlink" href="#about-this-notebook" title="Link to this heading">#</a></h2>
 <p>If you have comments or questions on this notebook, please contact us through the Archive Help Desk e-mail at <code class="docutils literal notranslate"><span class="pre">archive&#64;stsci.edu</span></code>.</p>
 <p><strong>Author(s):</strong> Jenny V. Medina <br>
 <strong>Keyword(s):</strong> Tutorial, TESS, TICA, SPOC, astroquery, astrocut, cutouts, ffi, tpf, tesscut <br>
 <strong>Last Updated:</strong> Mar 2023 <br></p>
 <hr class="docutils" />
-<p><span class="xref myst">Top of Page</span>
+<p><a class="reference internal" href="#top"><span class="xref myst">Top of Page</span></a>
 <a class="reference internal" href="https://raw.githubusercontent.com/spacetelescope/notebooks/master/assets/stsci_pri_combo_mark_horizonal_white_bkgd.png"><img alt="Space Telescope Logo" src="https://raw.githubusercontent.com/spacetelescope/notebooks/master/assets/stsci_pri_combo_mark_horizonal_white_bkgd.png" style="width: 200px;" /></a></p>
 </section>
 </section>
@@ -1553,27 +1475,9 @@ authors. Follow these links for more information about citing astroquery and ast
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../../../intro.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to the MAST Notebook Repository!</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../../astroquery/intro.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Intro</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -1629,7 +1533,7 @@ By STScI
 
   <p class="copyright">
     
-      © Copyright 2022-2024.
+      © Copyright 2022-2025.
       <br/>
     
   </p>
@@ -1653,8 +1557,8 @@ By STScI
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Find Existing and Planned JWST Observations &#8212; MAST Notebook Repository</title>
   
@@ -15,49 +14,47 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/table.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/table.css?v=cd6c26fb" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=32d70693" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-SK672ZMP7G"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -65,12 +62,16 @@
                 gtag('js', new Date());
                 gtag('config', 'G-SK672ZMP7G');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-SK672ZMP7G');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/JWST/duplication_checking/duplication_astroquery_api';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -83,27 +84,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -125,8 +122,13 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -152,6 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../../../intro.html">
   
@@ -169,7 +173,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -179,82 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Astrocut</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../astrocut/making_tess_cubes_and_cutouts/making_tess_cubes_and_cutouts.html">Generating Cubes and Cutouts from TESS FFIs</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Astroquery</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../astroquery/intro.html">Intro</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../astroquery/nb.html">Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../astroquery/beginner_search/beginner_search.html">Beginner: Searching MAST using astroquery.mast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../astroquery/beginner_zcut/beginner_zcut.html">Beginner: Zcut and Astroquery Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../astroquery/large_downloads/large_downloads.html">Large Downloads in <code class="docutils literal notranslate"><span class="pre">astroquery.mast</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../astroquery/historic_quasar_observations/historic_quasar_observations.html">Historical Quasar Observations</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../astroquery/wildcard_searches/wildcard_searches.html">Wildcard Handling with Astroquery.mast</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">HSC</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/HCV_API/HCV_API_demo.html">Hubble Catalog of Variables Notebook (API version)</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/HCV_CASJOBS/HCV_casjobs_demo.html">Hubble Catalog of Variables Notebook (CasJobs version)</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/HSCV3_API/hscv3_api.html">Hubble Source Catalog API Notebook</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/HSCV3_SMC_API/hscv3_smc_api.html">Hubble Source Catalog API Notebook: SMC Color-Magnitude Diagram</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/HSC_TAP/HSC_TAP.html">MAST Table Access Protocol Hubble Source Catalog Demo</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/SWEEPS_HSCV3P1/sweeps_hscv3p1.html">Hubble Source Catalog SWEEPS Proper Motion Notebook</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../HSC/SWEEPS_HSCV3P1_API/sweeps_hscv3p1_api.html">Hubble Source Catalog SWEEPS Proper Motion Notebook</a></li>
-
-
-
-
-
-
-
-
-
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">IUE</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">IUE</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../IUE/exploring_UV_extinction_curves/exploring_UV_extinction_curves.html">Exploring UV Extinction Curves</a></li>
 </ul>
@@ -275,14 +215,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Kepler</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/beginner.html">Beginner Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/beginner.html">Beginner Notebooks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/plotting_lightcurves/plotting_lightcurves.html">Using Kepler Data to Plot a Light Curve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/plotting_images_from_tpf/plotting_images_from_tpf.html">Plotting Images from Kepler Target Pixel Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/plotting_dvts/plotting_dvts.html">Read and Plot A Kepler Data Validation Timeseries File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/plotting_catalog_over_FFI/plotting_catalog_over_FFI.html">Plotting a Catalog over a Kepler Full Frame Image File</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/lightkurve.html">Lightkurve</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/lightkurve.html">Lightkurve</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/lightkurve_analyzing_lc_products/lightkurve_analyzing_lc_products.html">Using <em>Kepler</em> Light Curve Products with Lightkurve</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/lightkurve_analyzing_tpf_products/lightkurve_analyzing_tpf_products.html">Using <em>Kepler</em> Target Pixel File Products with Lightkurve</a></li>
@@ -295,8 +235,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/lightkurve_interactively_inspecting_TPFs_and_LCs/lightkurve_interactively_inspecting_TPFs_and_LCs.html">Interactively Inspecting Target Pixel Files and Light Curves</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/inst_noise.html">Instrumental Noise</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/inst_noise.html">Instrumental Noise</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/instrumental_noise_1_data_gaps_and_quality_flags/instrumental_noise_1_data_gaps_and_quality_flags.html">Data Gaps and Quality Flags</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/instrumental_noise_2_spurious_signals_and_time_sampling_effects/instrumental_noise_2_spurious_signals_and_time_sampling_effects.html">Spurious Signals and Time Sampling Effects</a></li>
@@ -306,8 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/instrumental_noise_4_electronic_noise/instrumental_noise_4_electronic_noise.html">Electronic Noise</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/signals.html">Identifying Periodic Signals</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/signals.html">Identifying Periodic Signals</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/identifying_transiting_planet_signals/identifying_transiting_planet_signals.html">Identifying Transiting Planet Signals in a <em>Kepler</em> Light Curve</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/measuring_a_rotation_period/measuring_a_rotation_period.html">Measuring and Removing a Rotation Period Signal from a <em>Kepler</em> Light Curve</a></li>
@@ -317,8 +257,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/verifying_the_location_of_a_signal/verifying_the_location_of_a_signal.html">Verifying the Location of a Signal in <em>Kepler</em> Pixel Data</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/periodograms.html">Periodograms &amp; Asteroseismology</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Kepler/periodograms.html">Periodograms &amp; Asteroseismology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/creating_periodograms/creating_periodograms.html">Creating Periodograms</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/how_to_understand_and_manipulate_the_periodogram_of_an_oscillating_star/how_to_understand_and_manipulate_the_periodogram_of_an_oscillating_star.html">How to Understand and Manipulate the Periodogram of an Oscillating Star</a></li>
@@ -326,7 +266,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Kepler/how_to_estimate_a_stars_mass_and_radius_using_asteroseismology/how_to_estimate_a_stars_mass_and_radius_using_asteroseismology.html">How to Estimate a Star’s Mass and Radius Using Asteroseismology</a></li>
 
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">K2</span></p>
 <ul class="nav bd-sidenav">
@@ -348,7 +288,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TESS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/beginner.html">Beginner Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/beginner.html">Beginner Notebooks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/beginner_astroquery_dv/beginner_astroquery_dv.html">Retrieve TESS Data Validation Products with Astroquery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/beginner_how_to_use_dvt/beginner_how_to_use_dvt.html">Read and Plot A TESS Data Validation Timeseries File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/beginner_how_to_use_ffi/beginner_how_to_use_ffi.html">Read and Display a TESS Full Frame Image</a></li>
@@ -362,24 +302,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/beginner_tour_lc_tp/beginner_tour_lc_tp.html">A Tour of the Contents of the TESS 2-minute Cadence Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/beginner_tesscut_astroquery/beginner_tesscut_astroquery.html">Cutout of the TESS FFIs using Astrocut and Astroquery</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/lc.html">Light Curves</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/lc.html">Light Curves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/interm_gi_query/interm_gi_query.html">Intermediate:  Search and Download GI Program Light Curves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/interm_tasoc_lc/interm_tasoc_lc.html">Intermediate: Finding Flares and Variable Stars in TASOC Light Curves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/asteroid_rotation/asteroid_rotation.html">Finding the Rotation Curve of an Asteroid or Comet with TESScut and Lightkurve</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/FFIs.html">TESS FFIs</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/FFIs.html">TESS FFIs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/interm_tesscut_dss_overlay/interm_tesscut_dss_overlay.html">Intermediate: Overlay a Cutout of the TESS FFIs with DSS imaging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/interm_tesscut_requests/interm_tesscut_requests.html">Intermediate: Create TESS FFI Cutout using Python Requests</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/noise.html">Instrumental Noise</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../TESS/noise.html">Instrumental Noise</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/interm_tess_prf_retrieve/interm_tess_prf_retrieve.html">Intermediate: Retrieve TESS Pixel Response Function Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TESS/removing_scattered_light_using_regression/removing_scattered_light_using_regression.html">Removing Scattered Light from <em>TESS</em> Data Using the Lightkurve <code class="docutils literal notranslate"><span class="pre">RegressionCorrector</span></code></a></li>
 
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -395,7 +335,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -404,14 +344,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -434,36 +374,18 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/spacetelescope/mast_notebooks/main?urlpath=tree/notebooks/JWST/duplication_checking/duplication_astroquery_api.ipynb" target="_blank"
+      <li><a href="https://timeseries.science.stsci.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/spacetelescope/mast_notebooks&urlpath=lab/tree/mast_notebooks/notebooks/JWST/duplication_checking/duplication_astroquery_api.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../../../_static/images/logo_binder.svg">
+    <img alt="JupyterHub logo" src="../../../_static/images/logo_jupyterhub.svg">
   </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://colab.research.google.com/github/spacetelescope/mast_notebooks/blob/main/notebooks/JWST/duplication_checking/duplication_astroquery_api.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onColab"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="../../../_static/images/logo_colab.png">
-  </span>
-<span class="btn__text-container">Colab</span>
+<span class="btn__text-container">JupyterHub</span>
 </a>
 </li>
       
@@ -585,10 +507,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -596,14 +518,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -664,9 +586,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="find-existing-and-planned-jwst-observations">
-<h1>Find Existing and Planned JWST Observations<a class="headerlink" href="#find-existing-and-planned-jwst-observations" title="Permalink to this heading">#</a></h1>
+<h1>Find Existing and Planned JWST Observations<a class="headerlink" href="#find-existing-and-planned-jwst-observations" title="Link to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>As with <em>HST, JWST</em> observations that duplicate existing, planned, or approved observations will not be allowed unless investigators provide a scientific justification in their proposal and that request is approved. Consult the <a class="reference external" href="https://jwst-docs.stsci.edu/jwst-opportunities-and-policies/jwst-general-science-policies/jwst-duplicate-observations-policy">JWST Duplicate Observations Policy</a> for details. Broadly speaking, observations you are considering might duplicate observations in the current or prior cycles if
 your target is of the same astrophysical source, or there is significant spatial overlap of fields, <strong>and</strong> the following apply:</p>
 <ul class="simple">
@@ -677,7 +599,7 @@ your target is of the same astrophysical source, or there is significant spatial
 <p>Observations with a different scientific instrument than one you are considering <em>might</em> still duplicate if the observing configuration and capabilities are similar (e.g., NIRCam and NIRISS imaging, or NIRCam and NIRSpec spectroscopy).</p>
 <p>This notebook illustrates how to use the python package <a class="reference external" href="https://astroquery.readthedocs.io/en/latest/mast/mast.html">astroquery.mast</a> to search the Mikulski Archive for Space Telescopes (MAST) for potential duplicate observations.</p>
 <section id="special-disclaimer">
-<h3>Special Disclaimer<a class="headerlink" href="#special-disclaimer" title="Permalink to this heading">#</a></h3>
+<h3>Special Disclaimer<a class="headerlink" href="#special-disclaimer" title="Link to this heading">#</a></h3>
 <p><a id="Disclaimer"></a></p>
 <p>The capabilities described here will help <em>identify</em> potential duplications between your intended JWST observations and those that have been approved, planned, or that have already executed.</p>
 <div class="alert alert-block alert-warning">
@@ -687,7 +609,7 @@ The complete footprint of approved (but not executed) mosaicked or parallel obse
 </div>
 </section>
 <section id="table-of-contents">
-<h3>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h3>
+<h3>Table of contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h3>
 <ul>
     <li><a href="#Strategy">Strategy</a></li>
     <li><a href="#Setup">Setup</a></li>
@@ -715,7 +637,7 @@ The complete footprint of approved (but not executed) mosaicked or parallel obse
 </section>
 </section>
 <section id="strategy">
-<h2>Strategy<a class="headerlink" href="#strategy" title="Permalink to this heading">#</a></h2>
+<h2>Strategy<a class="headerlink" href="#strategy" title="Link to this heading">#</a></h2>
 <p>The following strategy, applied to each target or field, will identify potentially duplicative observations relatively efficiently.</p>
 <ol class="arabic simple">
 <li><p>Search for common targets or fields. If no existing or planned observation coincides with your intended target, you are done.</p></li>
@@ -732,12 +654,12 @@ The complete footprint of approved (but not executed) mosaicked or parallel obse
 <p><a id="Setup"></a></p>
 </section>
 <section id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h2>
 <p>Begin by importing some essential python packages: general utilities in <a class="reference external" href="https://www.astropy.org/">astropy</a>, and query services in <a class="reference external" href="https://astroquery.readthedocs.io/en/latest/mast/mast.html">astroquery.mast</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the notebook cells more of the available width</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;style&gt;.container { width:99% !important; }&lt;/style&gt;&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -747,27 +669,27 @@ The complete footprint of approved (but not executed) mosaicked or parallel obse
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">astropy</span>
-<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">table</span>
-<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span><span class="p">,</span> <span class="n">unique</span>
-<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">Angle</span>
-<span class="kn">from</span> <span class="nn">astroquery.mast</span> <span class="kn">import</span> <span class="n">Mast</span>
-<span class="kn">from</span> <span class="nn">astroquery.mast</span> <span class="kn">import</span> <span class="n">Observations</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">astropy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy</span><span class="w"> </span><span class="kn">import</span> <span class="n">table</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.table</span><span class="w"> </span><span class="kn">import</span> <span class="n">Table</span><span class="p">,</span> <span class="n">unique</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy</span><span class="w"> </span><span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.coordinates</span><span class="w"> </span><span class="kn">import</span> <span class="n">Angle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astroquery.mast</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mast</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astroquery.mast</span><span class="w"> </span><span class="kn">import</span> <span class="n">Observations</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p><a id="Utility Routines"></a></p>
 <section id="utility-routines">
-<h3>Utility Routines<a class="headerlink" href="#utility-routines" title="Permalink to this heading">#</a></h3>
+<h3>Utility Routines<a class="headerlink" href="#utility-routines" title="Link to this heading">#</a></h3>
 <p>The following utility routine will create URLs to the parent programs of matching observations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">APT_LINK</span> <span class="o">=</span> <span class="s1">&#39;(http://www.stsci.edu/cgi-bin/get-proposal-info?id=</span><span class="si">{}</span><span class="s1">&amp;observatory=JWST)&#39;</span>
 
-<span class="k">def</span> <span class="nf">get_program_URL</span><span class="p">(</span><span class="n">program_id</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_program_URL</span><span class="p">(</span><span class="n">program_id</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Generate the URL for program status information, given a program ID. </span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -780,7 +702,7 @@ The complete footprint of approved (but not executed) mosaicked or parallel obse
 <p>The following utility routine will construct ranges in RA and Dec to facilitate queries in an area surrounding a given place in the sky.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">coord_ranges</span><span class="p">(</span><span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">extent_ra</span><span class="p">,</span> <span class="n">extent_dec</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">coord_ranges</span><span class="p">(</span><span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">extent_ra</span><span class="p">,</span> <span class="n">extent_dec</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -804,7 +726,7 @@ The complete footprint of approved (but not executed) mosaicked or parallel obse
 </section>
 </section>
 <section id="queries-by-target-postion">
-<h2>Queries by Target/Postion<a class="headerlink" href="#queries-by-target-postion" title="Permalink to this heading">#</a></h2>
+<h2>Queries by Target/Postion<a class="headerlink" href="#queries-by-target-postion" title="Link to this heading">#</a></h2>
 <p>All of the queries below search for JWST observations, using a search radius larger than fields of view (FoV) of JWST apertures, to allow for the possibility that the FoV may be rotated when approved-but-unexecuted observations are actually scheduled. Restrict the search to JWST by including the parameter: <code class="docutils literal notranslate"><span class="pre">obs_collection</span> <span class="pre">=</span> <span class="pre">&quot;JWST&quot;</span></code>.</p>
 <div class="alert alert-block alert-warning">
 <span style="color:black">
@@ -813,7 +735,7 @@ The complete footprint of approved (but not executed) mosaicked or parallel obse
 </span></p>
 </div><p><a id="Target Search"></a></p>
 <section id="search-by-target-name">
-<h3>Search by Target Name<a class="headerlink" href="#search-by-target-name" title="Permalink to this heading">#</a></h3>
+<h3>Search by Target Name<a class="headerlink" href="#search-by-target-name" title="Link to this heading">#</a></h3>
 <p>This example shows how to query for a single target with a standard name, <strong>HD 104237</strong> which is a T-Tauri star. We first resolve the name and verify that the coordinates are correct.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -830,7 +752,7 @@ The complete footprint of approved (but not executed) mosaicked or parallel obse
 </div>
 </div>
 </div>
-<p>In this case the resolved coordinates agree with those in (see <a class="reference external" href="https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=HD+104237&amp;submit=SIMBAD+search">Simbad</a>), so it is safe to execute a simple <strong>cone search</strong> (a search within a specified radius of a place on the sky) to find JWST existing or planned observations.
+<p>In this case the resolved coordinates agree with those in (see <a class="reference external" href="https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=HD+104237&amp;amp;submit=SIMBAD+search">Simbad</a>), so it is safe to execute a simple <strong>cone search</strong> (a search within a specified radius of a place on the sky) to find JWST existing or planned observations.
 The <a class="reference external" href="https://astroquery.readthedocs.io/en/latest/mast/mast.html">astroquery.mast</a> package provides the method <strong>Observations.query_criteria()</strong> to specify the parameters for the search; provide them as key=value pairs. The full set of query parameters for this method may be found on <a class="reference external" href="https://mast.stsci.edu/api/v0/_c_a_o_mfields.html">CAOM Field Descriptions</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -860,7 +782,7 @@ The <a class="reference external" href="https://astroquery.readthedocs.io/en/lat
 </div><p><a id="Moving-Target"></a></p>
 </section>
 <section id="single-moving-target">
-<h3>Single Moving Target<a class="headerlink" href="#single-moving-target" title="Permalink to this heading">#</a></h3>
+<h3>Single Moving Target<a class="headerlink" href="#single-moving-target" title="Link to this heading">#</a></h3>
 <p>Moving targets, by definition, do not lend themselves to searches by position. This kind of search is limited to a modest set of solar system bodies with recognized names. Note the use of a wildcard character (*) in case the target name includes other text.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -991,11 +913,11 @@ proposal_id                                proposal_URL
 </section>
 </section>
 <section id="checking-a-list-of-targets">
-<h2>Checking a List of Targets<a class="headerlink" href="#checking-a-list-of-targets" title="Permalink to this heading">#</a></h2>
+<h2>Checking a List of Targets<a class="headerlink" href="#checking-a-list-of-targets" title="Link to this heading">#</a></h2>
 <p>It is often useful to search for individual targets with the <a class="reference external" href="https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html">MAST Portal</a> because the results are easily visualized. But it is more efficient to search over a large number of targets using astroquery.mast.</p>
 <p><a id="Target-CSV"></a></p>
 <section id="loading-targets-from-csv">
-<h3>Loading Targets from CSV<a class="headerlink" href="#loading-targets-from-csv" title="Permalink to this heading">#</a></h3>
+<h3>Loading Targets from CSV<a class="headerlink" href="#loading-targets-from-csv" title="Link to this heading">#</a></h3>
 <p>For efficiency, make a CSV (comma-separated variable) list of your targets, one per row. The list can alternatively be read from a local file: just substitute the file name for <code class="docutils literal notranslate"><span class="pre">targ_table</span></code> in the first argument of the <code class="docutils literal notranslate"><span class="pre">Table.read()</span></code> method. The list can contain many fields, but at a minimum must contain the target name and the equitorial coordinates.</p>
 <p>The first row of the file will be interpreted as a column name in the table. <b>This is important.</b></p>
 <div class="cell docutils container">
@@ -1111,7 +1033,7 @@ For targets where no JWST Observations exist, there is no potential for duplicat
 </section>
 </section>
 <section id="evaluating-potential-duplications">
-<h2>Evaluating Potential Duplications<a class="headerlink" href="#evaluating-potential-duplications" title="Permalink to this heading">#</a></h2>
+<h2>Evaluating Potential Duplications<a class="headerlink" href="#evaluating-potential-duplications" title="Link to this heading">#</a></h2>
 <p>To examine the matching Observations for the other targets in more detail, use the <b><code>query_criteria()</code></b>
 method.</p>
 <div class="cell docutils container">
@@ -1132,7 +1054,7 @@ method.</p>
 <p>Targets with matching JWST Observations are examined in the following sub-sections.</p>
 <p><a id="Trappist-1"></a></p>
 <section id="trappist-1">
-<h3>Trappist-1<a class="headerlink" href="#trappist-1" title="Permalink to this heading">#</a></h3>
+<h3>Trappist-1<a class="headerlink" href="#trappist-1" title="Link to this heading">#</a></h3>
 <p>Trappist-1 is a well known exo-planet host star. If the intended observations are timeseries spectroscopy, the search would naturally be limited to a small area of sky. There are quite a few JWST observations of this target, so it is important to examine the relevant details.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1231,7 +1153,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </div><p><a id="V-XX-Cha"></a></p>
 </section>
 <section id="v-xx-cha">
-<h3>V* XX Cha<a class="headerlink" href="#v-xx-cha" title="Permalink to this heading">#</a></h3>
+<h3>V* XX Cha<a class="headerlink" href="#v-xx-cha" title="Link to this heading">#</a></h3>
 <p>This pre-main-sequence star has a debris disk, and might be worth a coronagraphic observation. The search area is small (20 arcsec) to exclude nearby targets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1301,7 +1223,7 @@ While JWST spectra from MIRI and NIRSpec exist or are planned, there is no poten
 </div><p><a id="M-57"></a></p>
 </section>
 <section id="m-57">
-<h3>M 57<a class="headerlink" href="#m-57" title="Permalink to this heading">#</a></h3>
+<h3>M 57<a class="headerlink" href="#m-57" title="Link to this heading">#</a></h3>
 <p>The Ring Nebula (NGC 6720) is well observed, particularly with HST and, recently, with JWST. We searched a 4-arcmin region around the source to include potential spectral Observations in the nebular periphery. The following table shows the unique combinations of instrument configurations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1403,12 +1325,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span style="color:black">
     There are both MIRI and NIRCam images in many passbands, and MIRI and NIRSpec spectroscopic IFU Observations of this target that could conflict with the intended proposal. 
 </span>
-</div><p>To retain this target it would be necessary to obtain spectra in a different location, or to use a different instrument/configuration/data-taking mode (e.g., time-series of the central star). It may be helpful to see the <a class="reference external" href="https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html?searchQuery=%7B%22service%22%3A%22CAOMFILTERED%22%2C%22inputText%22%3A%5B%7B%22paramName%22%3A%22obs_collection%22%2C%22niceName%22%3A%22obs_collection%22%2C%22values%22%3A%5B%22JWST%22%5D%2C%22valString%22%3A%22JWST%22%2C%22isDate%22%3Afalse%2C%22separator%22%3A%22%3B%22%2C%22facetType%22%3A%22discrete%22%2C%22displayString%22%3A%22JWST%22%7D%5D%2C%22position%22%3A%22283.39623652463%2C%2033.02913424654%2C%200.066667%22%2C%22paramsService%22%3A%22Mast.Caom.Filtered.Position%22%2C%22title%22%3A%22MAST%3A%20%20Advanced%20Search%201%22%2C%22tooltip%22%3A%22JWST%3B%20%20m%2057%20r%3D4m%3B%22%2C%22ra%22%3A283.39623652463%2C%22dec%22%3A33.02913424654%2C%22radius%22%3A0.066667%2C%22columns%22%3A%22*%22%2C%22columnsConfig%22%3A%22Mast.Caom.Cone%22%7D">footprints of these Observations</a> in the MAST Portal, or to view the observation specifications in Program <a class="reference external" href="https://www.stsci.edu/cgi-bin/get-proposal-info?id=1558&amp;observatory=JWST">GO-1558</a>.</p>
+</div><p>To retain this target it would be necessary to obtain spectra in a different location, or to use a different instrument/configuration/data-taking mode (e.g., time-series of the central star). It may be helpful to see the <a class="reference external" href="https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html?searchQuery=%7B%22service%22%3A%22CAOMFILTERED%22%2C%22inputText%22%3A%5B%7B%22paramName%22%3A%22obs_collection%22%2C%22niceName%22%3A%22obs_collection%22%2C%22values%22%3A%5B%22JWST%22%5D%2C%22valString%22%3A%22JWST%22%2C%22isDate%22%3Afalse%2C%22separator%22%3A%22%3B%22%2C%22facetType%22%3A%22discrete%22%2C%22displayString%22%3A%22JWST%22%7D%5D%2C%22position%22%3A%22283.39623652463%2C%2033.02913424654%2C%200.066667%22%2C%22paramsService%22%3A%22Mast.Caom.Filtered.Position%22%2C%22title%22%3A%22MAST%3A%20%20Advanced%20Search%201%22%2C%22tooltip%22%3A%22JWST%3B%20%20m%2057%20r%3D4m%3B%22%2C%22ra%22%3A283.39623652463%2C%22dec%22%3A33.02913424654%2C%22radius%22%3A0.066667%2C%22columns%22%3A%22*%22%2C%22columnsConfig%22%3A%22Mast.Caom.Cone%22%7D">footprints of these Observations</a> in the MAST Portal, or to view the observation specifications in Program <a class="reference external" href="https://www.stsci.edu/cgi-bin/get-proposal-info?id=1558&amp;amp;observatory=JWST">GO-1558</a>.</p>
 <p><a id="Appendix"></a></p>
 </section>
 </section>
 <section id="appendix-caveats">
-<h2>Appendix: Caveats<a class="headerlink" href="#appendix-caveats" title="Permalink to this heading">#</a></h2>
+<h2>Appendix: Caveats<a class="headerlink" href="#appendix-caveats" title="Link to this heading">#</a></h2>
 <p>It is possible to search MAST for individual sources by name, in one of two ways: <em>Object Name</em> or by <em>Target Name</em>.</p>
 <ul class="simple">
 <li><p><strong>Object Name:</strong> MAST invokes an astrophysical name resolver (e.g., <a class="reference external" href="https://ned.ipac.caltech.edu/byname">NED</a> or <a class="reference external" href="https://simbad.u-strasbg.fr/simbad/sim-fid">Simbad</a>) to look up source coordinates. Not all object names are recognized by resolvers. Also, different resolvers sometimes return substantially different coordinates; MAST will pick one of them (but not tell you which one). Sometimes the coordinates returned by the resolvers differ by substantial amounts, often because they refer to different sources.</p>
@@ -1431,7 +1353,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </div><p><a id="Resources"></a></p>
 </section>
 <section id="additional-resources">
-<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading">#</a></h2>
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.astropy.org/en/stable/index.html">astropy</a> documentation</p></li>
 <li><p><a class="reference external" href="https://astroquery.readthedocs.io/en/latest/mast/mast.html">astroquery</a> documentation for querying MAST</p></li>
@@ -1440,7 +1362,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </ul>
 </section>
 <section id="about-this-notebook">
-<h2>About this notebook<a class="headerlink" href="#about-this-notebook" title="Permalink to this heading">#</a></h2>
+<h2>About this notebook<a class="headerlink" href="#about-this-notebook" title="Link to this heading">#</a></h2>
 <p>This notebook was developed by Archive Sciences Branch staff. For support, please contact the Archive HelpDesk at archive&#64;stsci.edu, or through the <a class="reference external" href="https://jwsthelp.stsci.edu">JWST HelpDesk Portal</a>.
 <a class="reference internal" href="https://raw.githubusercontent.com/spacetelescope/notebooks/master/assets/stsci_pri_combo_mark_horizonal_white_bkgd.png"><img alt="Space Telescope Logo" src="https://raw.githubusercontent.com/spacetelescope/notebooks/master/assets/stsci_pri_combo_mark_horizonal_white_bkgd.png" style="width: 200px;" /></a></p>
 <p><strong>Last update:</strong> 2023 Aug</p>
@@ -1474,7 +1396,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
 </div>
@@ -1545,7 +1467,7 @@ By STScI
 
   <p class="copyright">
     
-      © Copyright 2022-2024.
+      © Copyright 2022-2025.
       <br/>
     
   </p>
@@ -1569,8 +1491,8 @@ By STScI
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
